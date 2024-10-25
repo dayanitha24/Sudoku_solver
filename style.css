@@ -1,0 +1,60 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #bd9393;
+}
+
+.container {
+    text-align: center;
+}
+
+#sudoku-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+}
+
+.subgrid {
+    display: grid;
+    grid-template-columns: repeat(3, 40px);
+    grid-template-rows: repeat(3, 40px);
+    gap: 5px;
+    border: 2px solid black;
+    padding: 5px;
+}
+
+#sudoku-grid input {
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    text-align: center;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+#solve-button {
+    margin-top: 30px;
+    background-color: #010c01;
+    color: white;
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+#solve-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 20px;
+    color: green;
+}
